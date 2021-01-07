@@ -31,6 +31,11 @@
 		4E6C84F8257882E600896E88 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C84F7257882E600896E88 /* MapViewController.swift */; };
 		4E85D7E1258AEFEE00B4DDA8 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85D7E0258AEFEE00B4DDA8 /* RoundedTextField.swift */; };
 		4E85D7E3258AF12700B4DDA8 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85D7E2258AF12700B4DDA8 /* NewRestaurantController.swift */; };
+		4EE15A6A25A6A701000C1FEF /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE15A6925A6A701000C1FEF /* Hotel.swift */; };
+		4EE15A6C25A6BA73000C1FEF /* HotelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE15A6B25A6BA73000C1FEF /* HotelTableViewController.swift */; };
+		4EE15A6E25A6BBFC000C1FEF /* HotelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE15A6D25A6BBFC000C1FEF /* HotelDetailViewController.swift */; };
+		4EE15A7025A6BD0D000C1FEF /* HotelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE15A6F25A6BD0D000C1FEF /* HotelTableViewCell.swift */; };
+		4EE15A7225A6BE40000C1FEF /* HotelDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE15A7125A6BE40000C1FEF /* HotelDetailHeaderView.swift */; };
 		4EE817632541277C008B828E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE817622541277C008B828E /* AppDelegate.swift */; };
 		4EE817652541277C008B828E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE817642541277C008B828E /* SceneDelegate.swift */; };
 		4EE8176A2541277C008B828E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE817682541277C008B828E /* Main.storyboard */; };
@@ -65,6 +70,11 @@
 		4E6C84F7257882E600896E88 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4E85D7E0258AEFEE00B4DDA8 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		4E85D7E2258AF12700B4DDA8 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
+		4EE15A6925A6A701000C1FEF /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		4EE15A6B25A6BA73000C1FEF /* HotelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTableViewController.swift; sourceTree = "<group>"; };
+		4EE15A6D25A6BBFC000C1FEF /* HotelDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailViewController.swift; sourceTree = "<group>"; };
+		4EE15A6F25A6BD0D000C1FEF /* HotelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTableViewCell.swift; sourceTree = "<group>"; };
+		4EE15A7125A6BE40000C1FEF /* HotelDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailHeaderView.swift; sourceTree = "<group>"; };
 		4EE8175F2541277C008B828E /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE817622541277C008B828E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EE817642541277C008B828E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +175,8 @@
 				4E2BA74D2581C29F0025546B /* ReviewViewController.swift */,
 				4E85D7E2258AF12700B4DDA8 /* NewRestaurantController.swift */,
 				4E0BF35E259440E2000DBD8B /* AboutMeController.swift */,
+				4EE15A6B25A6BA73000C1FEF /* HotelTableViewController.swift */,
+				4EE15A6D25A6BBFC000C1FEF /* HotelDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +191,8 @@
 				4E6C84F3257877B000896E88 /* RestaurantDetailSeparatorCell.swift */,
 				4E6C84F5257878D900896E88 /* RestaurantDetailMapCell.swift */,
 				4E85D7E0258AEFEE00B4DDA8 /* RoundedTextField.swift */,
+				4EE15A6F25A6BD0D000C1FEF /* HotelTableViewCell.swift */,
+				4EE15A7125A6BE40000C1FEF /* HotelDetailHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5419B32566047000AE2EB4 /* Restaurant.swift */,
+				4EE15A6925A6A701000C1FEF /* Hotel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,10 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE15A6E25A6BBFC000C1FEF /* HotelDetailViewController.swift in Sources */,
 				4E6C84F6257878D900896E88 /* RestaurantDetailMapCell.swift in Sources */,
 				4EE8177925413599008B828E /* RestaurantTableViewCell.swift in Sources */,
 				4E2BA74E2581C29F0025546B /* ReviewViewController.swift in Sources */,
 				4E0BF35F259440E2000DBD8B /* AboutMeController.swift in Sources */,
+				4EE15A6C25A6BA73000C1FEF /* HotelTableViewController.swift in Sources */,
 				4E0D3E08256F527F00E04A0E /* RestaurantDetailTextCell.swift in Sources */,
 				4EE817632541277C008B828E /* AppDelegate.swift in Sources */,
 				4E5419B42566047000AE2EB4 /* Restaurant.swift in Sources */,
@@ -285,8 +302,11 @@
 				4E6C84F8257882E600896E88 /* MapViewController.swift in Sources */,
 				4E3CBE0025539CB1002913BA /* RestaurantDetailViewController.swift in Sources */,
 				4E85D7E3258AF12700B4DDA8 /* NewRestaurantController.swift in Sources */,
+				4EE15A7025A6BD0D000C1FEF /* HotelTableViewCell.swift in Sources */,
 				4EE817652541277C008B828E /* SceneDelegate.swift in Sources */,
 				4E85D7E1258AEFEE00B4DDA8 /* RoundedTextField.swift in Sources */,
+				4EE15A6A25A6A701000C1FEF /* Hotel.swift in Sources */,
+				4EE15A7225A6BE40000C1FEF /* HotelDetailHeaderView.swift in Sources */,
 				4EE817772541293D008B828E /* RestaurantTableViewController.swift in Sources */,
 				4E6C84F4257877B000896E88 /* RestaurantDetailSeparatorCell.swift in Sources */,
 			);
