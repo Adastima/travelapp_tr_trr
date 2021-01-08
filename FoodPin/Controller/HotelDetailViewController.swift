@@ -12,7 +12,7 @@ class HotelDetailViewController: UIViewController, UITableViewDataSource, UITabl
 
         
         @IBOutlet var tableView: UITableView!
-        @IBOutlet var headerView: RestaurantDetailHeaderView!
+        @IBOutlet var headerView: HotelDetailHeaderView!
         
         var  hotel = Hotel()
 
@@ -29,37 +29,36 @@ class HotelDetailViewController: UIViewController, UITableViewDataSource, UITabl
             switch indexPath.row {
                         
             case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
-    //        cell.iconImageView.image = UIImage(systemName: "phone")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HotelDetailIconTextCell.self), for: indexPath) as! HotelDetailIconTextCell
+    
             cell.iconImageView.image = UIImage(named: "phone")
             cell.shortTextLabel.text = hotel.phone
             cell.selectionStyle = .none
                         
             return cell
             case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
-    //        cell.iconImageView.image = UIImage(systemName: "map")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HotelDetailIconTextCell.self), for: indexPath) as! HotelDetailIconTextCell
             cell.iconImageView.image = UIImage(named: "map")
             cell.shortTextLabel.text = hotel.location
             cell.selectionStyle = .none
                         
             return cell
             case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HotelDetailTextCell.self), for: indexPath) as! HotelDetailTextCell
             cell.descriptionLabel.text = hotel.summary
             cell.selectionStyle = .none
             
             return cell
              
             case 3:
-                let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailSeparatorCell.self), for: indexPath) as! RestaurantDetailSeparatorCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HotelDetailSeparatorCell.self), for: indexPath) as! HotelDetailSeparatorCell
                 cell.titleLabel.text = "HOW TO GET HERE"
                 cell.selectionStyle = .none
                 
                 return cell
                 
             case 4:
-                let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailMapCell.self), for: indexPath) as! RestaurantDetailMapCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HotelDetailMapCell.self), for: indexPath) as! HotelDetailMapCell
                 cell.selectionStyle = .none
                 cell.configure(location: hotel.location)
                 
@@ -92,11 +91,11 @@ class HotelDetailViewController: UIViewController, UITableViewDataSource, UITabl
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "showMap" {
-                let destinationController = segue.destination as! MapViewController
+                let destinationController = segue.destination as! HotelMapViewController
                 destinationController.hotel = hotel
             }
             else if segue.identifier == "showReview" {
-                let destinationController = segue.destination as! ReviewViewController
+                let destinationController = segue.destination as! HotelReviewViewController
                 destinationController.hotel = hotel
             }
         }
@@ -105,7 +104,7 @@ class HotelDetailViewController: UIViewController, UITableViewDataSource, UITabl
             dismiss(animated: true, completion: nil)
         }
         
-        @IBAction func rateRestaurant(segue: UIStoryboardSegue) {
+        @IBAction func rateHotel(segue: UIStoryboardSegue) {
             if let rating = segue.identifier {
                 self.hotel.rating = rating
                 self.headerView.ratingImageView.image = UIImage(named: rating)

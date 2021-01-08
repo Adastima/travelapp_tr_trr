@@ -404,7 +404,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="act-fR-2Tb">
-                                <rect key="frame" x="332" y="44" width="66" height="64"/>
+                                <rect key="frame" x="365" y="44" width="33" height="32"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="cross">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -414,10 +414,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6ed-UG-X64">
-                                <rect key="frame" x="59" y="-13" width="296" height="922"/>
+                                <rect key="frame" x="98" y="207.5" width="218" height="481"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzd-Bb-RUz">
-                                        <rect key="frame" x="0.0" y="0.0" width="258" height="164"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="82"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
                                         <connections>
@@ -425,7 +425,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaR-we-ZUu">
-                                        <rect key="frame" x="0.0" y="174" width="255" height="166"/>
+                                        <rect key="frame" x="0.0" y="92" width="177" height="83"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
                                         <connections>
@@ -433,7 +433,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDT-TH-PkV">
-                                        <rect key="frame" x="0.0" y="350" width="296" height="172"/>
+                                        <rect key="frame" x="0.0" y="185" width="218" height="86"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
                                         <connections>
@@ -441,7 +441,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viw-bY-uYW">
-                                        <rect key="frame" x="0.0" y="532" width="240" height="174"/>
+                                        <rect key="frame" x="0.0" y="281" width="162" height="87"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="Sad" image="sad"/>
                                         <connections>
@@ -449,7 +449,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ww5-AZ-6Oq">
-                                        <rect key="frame" x="0.0" y="716" width="283" height="206"/>
+                                        <rect key="frame" x="0.0" y="378" width="205" height="103"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
                                         <connections>
@@ -503,11 +503,11 @@
             </objects>
             <point key="canvasLocation" x="267" y="-592"/>
         </scene>
-        <!--eat-->
+        <!--Eat-->
         <scene sceneID="e1C-X5-YpG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qjl-QE-kqJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="eat" image="store" id="3EW-Oz-Kes"/>
+                    <tabBarItem key="tabBarItem" title="Eat" image="store" id="3EW-Oz-Kes"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fKz-87-onc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -987,7 +987,7 @@
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRl-so-ejt">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRl-so-ejt" userLabel="Website Label">
                                                             <rect key="frame" x="0.0" y="40.5" width="55.5" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1010,6 +1010,7 @@
                                     <outlet property="nameLabel" destination="kK3-5X-jGj" id="vbQ-Yp-wZh"/>
                                     <outlet property="thumbnailImageView" destination="c9U-LV-Qxu" id="VW1-by-Q1M"/>
                                     <outlet property="typeLabel" destination="GRl-so-ejt" id="bQX-Tp-a4W"/>
+                                    <segue destination="0L3-sW-Acd" kind="show" trigger="accessoryAction" id="VFb-AF-bTI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1027,6 +1028,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RYD-K9-NFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1128" y="-593"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ola-mc-fzz">
+            <objects>
+                <viewController id="0L3-sW-Acd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEK-QC-9H7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qdW-EI-ZE6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="r8P-h2-UM0" firstAttribute="bottom" secondItem="qdW-EI-ZE6" secondAttribute="bottom" id="LNu-cG-qtQ"/>
+                            <constraint firstItem="qdW-EI-ZE6" firstAttribute="leading" secondItem="r8P-h2-UM0" secondAttribute="leading" id="Qpu-AD-TgA"/>
+                            <constraint firstItem="r8P-h2-UM0" firstAttribute="trailing" secondItem="qdW-EI-ZE6" secondAttribute="trailing" id="Zhb-hA-yKv"/>
+                            <constraint firstItem="qdW-EI-ZE6" firstAttribute="top" secondItem="r8P-h2-UM0" secondAttribute="top" id="bZM-6h-RD0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r8P-h2-UM0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="krw-Q1-gbR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEq-Fk-Gv0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="-593"/>
         </scene>
     </scenes>
     <resources>

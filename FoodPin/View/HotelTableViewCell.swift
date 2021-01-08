@@ -13,7 +13,7 @@ class HotelTableViewCell: UITableViewCell {
         
         @IBOutlet var nameLabel: UILabel!
         @IBOutlet var locationLabel: UILabel!
-        @IBOutlet var wesiteLabel: UILabel!
+        @IBOutlet var websiteLabel: UILabel!
         @IBOutlet var thumbnailImageView: UIImageView! {
             didSet {
                 thumbnailImageView.layer.cornerRadius = thumbnailImageView.bounds.width / 2

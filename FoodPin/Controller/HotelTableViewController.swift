@@ -24,7 +24,7 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            loadRestaurants()
+            loadHotels()
             if hotels.isEmpty {
                 Hotel.generateData(sourceArray: &hotels)
             }
@@ -77,8 +77,7 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
             else {
                 cell.accessoryType = .none
             }
-            //cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
-            
+    
             return cell
         }
         
@@ -155,24 +154,23 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
         // MARK: - Navigation
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "showRestaurantDetail" {
+            if segue.identifier == "showHotelDetail" {
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let destinationController = segue.destination as! HotelDetailViewController
                     destinationController.hotel = (searchController.isActive) ? searchResults[indexPath.row] : hotels[indexPath.row]
                 }
             }
-            else if segue.identifier == "addRestaurant" {
+            else if segue.identifier == "addHotel" {
                 let destinationController = segue.destination as! UINavigationController
-                let topView = destinationController.topViewController as! NewRestaurantController
+                let topView = destinationController.topViewController as! NewHotelController
                 topView.addDelegate = self
             }
         }
         
         
-        @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+       @IBAction func unwindToHome(segue: UIStoryboardSegue) {
             dismiss(animated: true, completion: nil)
         }
-        
         
         // MARK: - Data saving to the file
         
@@ -182,28 +180,28 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
         }
         
         func dataFilePath() -> URL {
-            return documentsDirectory().appendingPathComponent("Restaurants.plist")
+            return documentsDirectory().appendingPathComponent("Hotels.plist")
         }
         
         
-        func saveRestaurants() {
+        func saveHotels() {
             let encoder = PropertyListEncoder()
             do {
                 let data = try encoder.encode(hotels)
                 try data.write(to: dataFilePath(), options: Data.WritingOptions.atomic)
             } catch {
-                print("Error encoding restaurant array: \(error.localizedDescription)")
+                print("Error encoding hotel array: \(error.localizedDescription)")
             }
         }
         
-        func loadRestaurants() {
+        func loadHotels() {
             let path = dataFilePath()
             if let data = try? Data(contentsOf: path) {
                 let decoder = PropertyListDecoder()
                 do {
                     hotels = try decoder.decode([Hotel].self, from: data)
                 } catch {
-                    print("Error decoding restaurant array: \(error.localizedDescription)")
+                    print("Error decoding hotel array: \(error.localizedDescription)")
                 }
             }
         }
@@ -214,7 +212,7 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
         func filterContent(for searchText: String) {
             
             searchResults = hotels.filter({ (restaurant) -> Bool in
-                let name = restaurant.name
+                let name = hotel.name
                 let isMatch = name.localizedCaseInsensitiveContains(searchText)
                 
                 return isMatch
@@ -230,8 +228,8 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
         
     }
 
-    extension RestaurantTableViewController: AddDataDelegate {
-        func addRestaurant(item: Hotel) {
+    extension HotelTableViewController: AddDataDelegates {
+        func addHotel(item: Hotel) {
             hotels.append(item)
             let tableView = view as! UITableView
             tableView.insertRows(at: [IndexPath(row: hotels.count-1, section: 0)], with: .automatic)
