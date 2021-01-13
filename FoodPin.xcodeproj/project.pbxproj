@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186C339325AEFE3500117536 /* HotelreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C339225AEFE3500117536 /* HotelreViewController.swift */; };
 		4E0BF35F259440E2000DBD8B /* AboutMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0BF35E259440E2000DBD8B /* AboutMeController.swift */; };
 		4E0D3DF8256F3E9D00E04A0E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D3DED256F3E9D00E04A0E /* OFL.txt */; };
 		4E0D3DF9256F3E9D00E04A0E /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D3DEE256F3E9D00E04A0E /* Rubik-BlackItalic.ttf */; };
@@ -32,7 +33,6 @@
 		4E85D7E1258AEFEE00B4DDA8 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85D7E0258AEFEE00B4DDA8 /* RoundedTextField.swift */; };
 		4E85D7E3258AF12700B4DDA8 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85D7E2258AF12700B4DDA8 /* NewRestaurantController.swift */; };
 		4ED2549525A81ED500183B58 /* HotelMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2549425A81ED500183B58 /* HotelMapViewController.swift */; };
-		4ED2549725A81F5200183B58 /* HotelReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2549625A81F5200183B58 /* HotelReviewViewController.swift */; };
 		4ED2549B25A8216B00183B58 /* NewHotelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2549A25A8216B00183B58 /* NewHotelController.swift */; };
 		4ED2549F25A822CD00183B58 /* HotelDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2549E25A822CD00183B58 /* HotelDetailTextCell.swift */; };
 		4ED254A125A822F600183B58 /* HotelDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED254A025A822F600183B58 /* HotelDetailIconTextCell.swift */; };
@@ -53,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		186C339225AEFE3500117536 /* HotelreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelreViewController.swift; sourceTree = "<group>"; };
 		4E0BF35E259440E2000DBD8B /* AboutMeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeController.swift; sourceTree = "<group>"; };
 		4E0D3DED256F3E9D00E04A0E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		4E0D3DEE256F3E9D00E04A0E /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		4E85D7E0258AEFEE00B4DDA8 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		4E85D7E2258AF12700B4DDA8 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 		4ED2549425A81ED500183B58 /* HotelMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelMapViewController.swift; sourceTree = "<group>"; };
-		4ED2549625A81F5200183B58 /* HotelReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelReviewViewController.swift; sourceTree = "<group>"; };
 		4ED2549A25A8216B00183B58 /* NewHotelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotelController.swift; sourceTree = "<group>"; };
 		4ED2549E25A822CD00183B58 /* HotelDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailTextCell.swift; sourceTree = "<group>"; };
 		4ED254A025A822F600183B58 /* HotelDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailIconTextCell.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				4EE15A6B25A6BA73000C1FEF /* HotelTableViewController.swift */,
 				4EE15A6D25A6BBFC000C1FEF /* HotelDetailViewController.swift */,
 				4ED2549425A81ED500183B58 /* HotelMapViewController.swift */,
-				4ED2549625A81F5200183B58 /* HotelReviewViewController.swift */,
+				186C339225AEFE3500117536 /* HotelreViewController.swift */,
 				4ED2549A25A8216B00183B58 /* NewHotelController.swift */,
 			);
 			path = Controller;
@@ -254,7 +254,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = NDHU_CSIE;
 				TargetAttributes = {
 					4EE8175E2541277C008B828E = {
@@ -321,6 +321,7 @@
 				4EE15A6C25A6BA73000C1FEF /* HotelTableViewController.swift in Sources */,
 				4E0D3E08256F527F00E04A0E /* RestaurantDetailTextCell.swift in Sources */,
 				4EE817632541277C008B828E /* AppDelegate.swift in Sources */,
+				186C339325AEFE3500117536 /* HotelreViewController.swift in Sources */,
 				4E5419B42566047000AE2EB4 /* Restaurant.swift in Sources */,
 				4E0D3E06256F518100E04A0E /* RestaurantDetailIconTextCell.swift in Sources */,
 				4E0D3E04256F441700E04A0E /* RestaurantDetailHeaderView.swift in Sources */,
@@ -336,7 +337,6 @@
 				4EE817772541293D008B828E /* RestaurantTableViewController.swift in Sources */,
 				4ED254A125A822F600183B58 /* HotelDetailIconTextCell.swift in Sources */,
 				4E6C84F4257877B000896E88 /* RestaurantDetailSeparatorCell.swift in Sources */,
-				4ED2549725A81F5200183B58 /* HotelReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +388,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -448,6 +449,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

@@ -95,7 +95,7 @@ class HotelDetailViewController: UIViewController, UITableViewDataSource, UITabl
                 destinationController.hotel = hotel
             }
             else if segue.identifier == "showReview" {
-                let destinationController = segue.destination as! HotelReviewViewController
+                let destinationController = segue.destination as! HotelreViewController
                 destinationController.hotel = hotel
             }
         }

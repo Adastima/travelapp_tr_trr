@@ -77,7 +77,8 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
             else {
                 cell.accessoryType = .none
             }
-    
+            //cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
+            
             return cell
         }
         
@@ -163,14 +164,15 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
             else if segue.identifier == "addHotel" {
                 let destinationController = segue.destination as! UINavigationController
                 let topView = destinationController.topViewController as! NewHotelController
-                topView.addDelegate = self
+                topView.addDelegates = self
             }
         }
         
         
-       @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        @IBAction func unwindToHome(segue: UIStoryboardSegue) {
             dismiss(animated: true, completion: nil)
         }
+        
         
         // MARK: - Data saving to the file
         
@@ -180,7 +182,7 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
         }
         
         func dataFilePath() -> URL {
-            return documentsDirectory().appendingPathComponent("Hotels.plist")
+            return documentsDirectory().appendingPathComponent("Restaurants.plist")
         }
         
         
@@ -190,7 +192,7 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
                 let data = try encoder.encode(hotels)
                 try data.write(to: dataFilePath(), options: Data.WritingOptions.atomic)
             } catch {
-                print("Error encoding hotel array: \(error.localizedDescription)")
+                print("Error encoding restaurant array: \(error.localizedDescription)")
             }
         }
         
@@ -201,7 +203,7 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
                 do {
                     hotels = try decoder.decode([Hotel].self, from: data)
                 } catch {
-                    print("Error decoding hotel array: \(error.localizedDescription)")
+                    print("Error decoding restaurant array: \(error.localizedDescription)")
                 }
             }
         }
@@ -211,7 +213,7 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
         
         func filterContent(for searchText: String) {
             
-            searchResults = hotels.filter({ (restaurant) -> Bool in
+            searchResults = hotels.filter({ (hotel) -> Bool in
                 let name = hotel.name
                 let isMatch = name.localizedCaseInsensitiveContains(searchText)
                 

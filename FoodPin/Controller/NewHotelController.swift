@@ -18,7 +18,7 @@ protocol AddDataDelegates {
 class NewHotelController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
     
-    var addDelegate: AddDataDelegates?
+    var addDelegates: AddDataDelegates?
     
     var selectedImageName: String = ""
     
@@ -170,9 +170,9 @@ class NewHotelController: UITableViewController, UITextFieldDelegate, UIImagePic
             return
         }
         
-        let newValue = Hotel(name: nameTextField.text!, website: websiteTextField.text!, location: addressTextField.text!, phone: phoneTextField.text!, summary: descriptionTextView.text!, image: selectedImageName, isVisited: false)
+        let newValues = Hotel(name: nameTextField.text!, website: websiteTextField.text!, location: addressTextField.text!, phone: phoneTextField.text!, summary: descriptionTextView.text!, image: selectedImageName, isVisited: false)
         
-        addDelegate?.addHotel(item: newValue)
+        addDelegates?.addHotel(item: newValues)
         
         dismiss(animated: true, completion: nil)
     }
