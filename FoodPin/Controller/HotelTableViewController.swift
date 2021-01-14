@@ -161,11 +161,11 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
                     destinationController.hotel = (searchController.isActive) ? searchResults[indexPath.row] : hotels[indexPath.row]
                 }
             }
-            else if segue.identifier == "addHotel" {
-                let destinationController = segue.destination as! UINavigationController
-                let topView = destinationController.topViewController as! NewHotelController
-                topView.addDelegates = self
-            }
+          //  else if segue.identifier == "addHotel" {
+            //    let destinationController = segue.destination as! UINavigationController
+            //    let topView = destinationController.topViewController as! NewHotelController
+             //   topView.addDelegates = self
+           // }
         }
         
         
@@ -230,11 +230,11 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
         
     }
 
-    extension HotelTableViewController: AddDataDelegates {
-        func addHotel(item: Hotel) {
-            hotels.append(item)
-            let tableView = view as! UITableView
-            tableView.insertRows(at: [IndexPath(row: hotels.count-1, section: 0)], with: .automatic)
-        }
+   // extension HotelTableViewController: AddDataDelegates {
+      //  func addHotel(item: Hotel) {
+       //     hotels.append(item)
+        //    let tableView = view as! UITableView
+         //   tableView.insertRows(at: [IndexPath(row: hotels.count-1, section: 0)], with: .automatic)
+       // }
         
-    }
+    //}

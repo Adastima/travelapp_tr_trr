@@ -33,7 +33,6 @@
 		4E85D7E1258AEFEE00B4DDA8 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85D7E0258AEFEE00B4DDA8 /* RoundedTextField.swift */; };
 		4E85D7E3258AF12700B4DDA8 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85D7E2258AF12700B4DDA8 /* NewRestaurantController.swift */; };
 		4ED2549525A81ED500183B58 /* HotelMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2549425A81ED500183B58 /* HotelMapViewController.swift */; };
-		4ED2549B25A8216B00183B58 /* NewHotelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2549A25A8216B00183B58 /* NewHotelController.swift */; };
 		4ED2549F25A822CD00183B58 /* HotelDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2549E25A822CD00183B58 /* HotelDetailTextCell.swift */; };
 		4ED254A125A822F600183B58 /* HotelDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED254A025A822F600183B58 /* HotelDetailIconTextCell.swift */; };
 		4ED254A325A8233B00183B58 /* HotelDetailSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED254A225A8233B00183B58 /* HotelDetailSeparatorCell.swift */; };
@@ -79,7 +78,6 @@
 		4E85D7E0258AEFEE00B4DDA8 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		4E85D7E2258AF12700B4DDA8 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 		4ED2549425A81ED500183B58 /* HotelMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelMapViewController.swift; sourceTree = "<group>"; };
-		4ED2549A25A8216B00183B58 /* NewHotelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotelController.swift; sourceTree = "<group>"; };
 		4ED2549E25A822CD00183B58 /* HotelDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailTextCell.swift; sourceTree = "<group>"; };
 		4ED254A025A822F600183B58 /* HotelDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailIconTextCell.swift; sourceTree = "<group>"; };
 		4ED254A225A8233B00183B58 /* HotelDetailSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailSeparatorCell.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 				4EE15A6D25A6BBFC000C1FEF /* HotelDetailViewController.swift */,
 				4ED2549425A81ED500183B58 /* HotelMapViewController.swift */,
 				186C339225AEFE3500117536 /* HotelreViewController.swift */,
-				4ED2549A25A8216B00183B58 /* NewHotelController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,7 +323,6 @@
 				4E0D3E06256F518100E04A0E /* RestaurantDetailIconTextCell.swift in Sources */,
 				4E0D3E04256F441700E04A0E /* RestaurantDetailHeaderView.swift in Sources */,
 				4E6C84F8257882E600896E88 /* MapViewController.swift in Sources */,
-				4ED2549B25A8216B00183B58 /* NewHotelController.swift in Sources */,
 				4E3CBE0025539CB1002913BA /* RestaurantDetailViewController.swift in Sources */,
 				4E85D7E3258AF12700B4DDA8 /* NewRestaurantController.swift in Sources */,
 				4EE15A7025A6BD0D000C1FEF /* HotelTableViewCell.swift in Sources */,
