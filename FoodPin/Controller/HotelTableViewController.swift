@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
+class HotelTableViewController: UITableViewController ,UISearchResultsUpdating  {
 
 
         
@@ -26,16 +26,15 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
             
             loadHotels()
             if hotels.isEmpty {
-                Hotel.generateData(sourceArray: &hotels)
+                Hotel.generateDatas(sourceArray: &hotels)
             }
-            
-            navigationController?.navigationBar.prefersLargeTitles = true
-            
-            searchController = UISearchController(searchResultsController: nil)
+//
+           navigationController?.navigationBar.prefersLargeTitles = true
+//
+           searchController = UISearchController(searchResultsController: nil)
             self.navigationItem.searchController = searchController
-            
-            searchController.searchResultsUpdater = self
-            //not change the color of the search contents
+//
+          // searchController.searchResultsUpdater = self            //not change the color of the search contents
             searchController.obscuresBackgroundDuringPresentation = false
         }
         
@@ -53,24 +52,24 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
             }
             else {
                 return hotels.count
-            }
+           }
         }
         
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let cellIdentifier = "datacell"
+
+            let cellIdentifier = "datacell1"
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! HotelTableViewCell
-            
+
             // Configure the cell...
             // Determine if we get the restaurant from search result or the original array
             let hotel = (searchController.isActive) ? searchResults[indexPath.row] : hotels[indexPath.row]
-            
+
             cell.nameLabel.text = hotel.name //optional chaining
             cell.locationLabel.text = hotel.location
             cell.websiteLabel.text = hotel.website
             cell.thumbnailImageView.image = UIImage(named: hotel.image)
-            
+
             if hotels[indexPath.row].isVisited {
                 cell.accessoryType = .checkmark
             }
@@ -78,10 +77,10 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
                 cell.accessoryType = .none
             }
             //cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
-            
+
             return cell
         }
-        
+
         override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
             if searchController.isActive {
                 return false
@@ -89,71 +88,71 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
                 return true
             }
         }
-        
-        
-        
+
+
+
         override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-            
+
             let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
                 // Delete the row from the data source
                 self.hotels.remove(at: indexPath.row)
-                
+
                 self.tableView.deleteRows(at: [indexPath], with: .fade)
-                
+
                 // Call completion handler with true to indicate
                 completionHandler(true)
             }
-            
+
             let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
                 let defaultText = "Just checking in at " + self.hotels[indexPath.row].name
-                
+
                 let activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
                 self.present(activityController, animated: true, completion: nil)
                 completionHandler(true)
             }
-            
-            
+
+
             let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
-            
+
             // Set the icon and background color for the actions
             deleteAction.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
             //deleteAction.image = UIImage(systemName: "trash") //iOS 13
             deleteAction.image = UIImage(named: "delete")  //iOS 12
-            
-            
+
+
             shareAction.backgroundColor = UIColor(red: 254.0/255.0, green: 149.0/255.0, blue: 38.0/255.0, alpha: 1.0)
             //shareAction.image = UIImage(systemName: "square.and.arrow.up")
             shareAction.image = UIImage(named: "share") //iOS 12
-            
+
             return swipeConfiguration
         }
-        
-        
+
+
         override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-            
+
             let checkInAction = UIContextualAction(style: .normal, title: "Check-in") { (action, sourceView, completionHandler) in
-                
+
                 let cell = tableView.cellForRow(at: indexPath) as! HotelTableViewCell
                 self.hotels[indexPath.row].isVisited = (self.hotels[indexPath.row].isVisited) ? false : true
                 cell.accessoryType = self.hotels[indexPath.row].isVisited ? .checkmark : .none
-                
+
                 completionHandler(true)
             }
-            
+
             // let checkInIcon = restaurants[indexPath.row].isVisited ? "arrow.uturn.left" : "checkmark"
             let checkInIcon = hotels[indexPath.row].isVisited ? "undo" : "tick"
             checkInAction.backgroundColor = UIColor(red: 38.0/255.0, green: 162.0/255.0, blue: 78.0/255.0, alpha: 1.0)
             //checkInAction.image = UIImage(systemName: checkInIcon)
             checkInAction.image = UIImage(named: checkInIcon)  //iOS 12
-            
+
             let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkInAction])
-            
-            
+
+
             return swipeConfiguration
         }
-        
+
         // MARK: - Navigation
-        
+
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "showHotelDetail" {
                 if let indexPath = tableView.indexPathForSelectedRow {
@@ -167,35 +166,35 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
              //   topView.addDelegates = self
            // }
         }
-        
-        
-        @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-            dismiss(animated: true, completion: nil)
-        }
-        
-        
+
+
+        //@IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        //    dismiss(animated: true, completion: nil)
+       // }
+
+
         // MARK: - Data saving to the file
-        
+
         func documentsDirectory() -> URL {
             let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
             return paths[0]
         }
-        
+
         func dataFilePath() -> URL {
-            return documentsDirectory().appendingPathComponent("Restaurants.plist")
+            return documentsDirectory().appendingPathComponent("Hotels.plist")
         }
-        
-        
+
+
         func saveHotels() {
             let encoder = PropertyListEncoder()
             do {
                 let data = try encoder.encode(hotels)
                 try data.write(to: dataFilePath(), options: Data.WritingOptions.atomic)
             } catch {
-                print("Error encoding restaurant array: \(error.localizedDescription)")
+                print("Error encoding hotel array: \(error.localizedDescription)")
             }
         }
-        
+
         func loadHotels() {
             let path = dataFilePath()
             if let data = try? Data(contentsOf: path) {
@@ -203,31 +202,31 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
                 do {
                     hotels = try decoder.decode([Hotel].self, from: data)
                 } catch {
-                    print("Error decoding restaurant array: \(error.localizedDescription)")
+                    print("Error decoding hotel array: \(error.localizedDescription)")
                 }
             }
         }
-        
-        
+
+
         // MARK: - Search bar none core data version
-        
+
         func filterContent(for searchText: String) {
-            
+
             searchResults = hotels.filter({ (hotel) -> Bool in
                 let name = hotel.name
                 let isMatch = name.localizedCaseInsensitiveContains(searchText)
-                
+
                 return isMatch
             })
         }
-        
+
         func updateSearchResults(for searchController: UISearchController) {
             if let searchText = searchController.searchBar.text {
                 filterContent(for: searchText)
                 tableView.reloadData()
             }
         }
-        
+
     }
 
    // extension HotelTableViewController: AddDataDelegates {
@@ -237,4 +236,4 @@ class HotelTableViewController: UITableViewController,UISearchResultsUpdating  {
          //   tableView.insertRows(at: [IndexPath(row: hotels.count-1, section: 0)], with: .automatic)
        // }
         
-    //}
+   

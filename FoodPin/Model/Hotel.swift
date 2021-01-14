@@ -32,7 +32,7 @@ class Hotel: NSObject, Codable {
         self.init(name: "", website: "", location: "", phone: "", summary: "", image: "", isVisited: false)
     }
     
-    static func generateData(sourceArray: inout [Hotel]) {
+    static func generateDatas(sourceArray: inout [Hotel]) {
         sourceArray = [
             Hotel(name: "Hotel Villa Turka", website: "villaturka.com", location: "Tophane Mah. Kargı Sk. No:7 Alanya, Alanya, 07400, Turkey", phone: "00 90 530 547 4641", summary: " A stylish hotel with comfortable rooms, wonderful home-cooking and superb views. It attracts a multi-national crew of discerning travellers who want distinctive accommodation in one of the most picturesque locations on Turkey’s Mediterranean shore.", image:"villaturka.jpg",  isVisited: false),
             
